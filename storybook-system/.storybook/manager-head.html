@@ -1,0 +1,8 @@
+<title>CareerHub Foundations</title>
+<script>
+  const careerHubTitle = "CareerHub Foundations";
+  document.title = careerHubTitle;
+  new MutationObserver(() => {
+    if (document.title !== careerHubTitle) document.title = careerHubTitle;
+  }).observe(document.head, { childList: true, subtree: true });
+</script>

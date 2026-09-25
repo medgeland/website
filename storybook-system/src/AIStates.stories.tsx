@@ -6,7 +6,7 @@ const meta = {
   component: AIResultPanel,
   tags: ["autodocs"],
   args: { state: "empty" },
-  argTypes: { state: { control: "select", options: ["empty", "loading", "partial", "refusal", "success"] } },
+  argTypes: { state: { control: "select", options: ["empty", "loading", "partial", "refusal", "error", "success"] } },
 } satisfies Meta<typeof AIResultPanel>;
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -15,4 +15,5 @@ export const Empty: Story = { args: { state: "empty" } };
 export const Loading: Story = { args: { state: "loading" } };
 export const PartialResult: Story = { args: { state: "partial" } };
 export const ModelRefusal: Story = { args: { state: "refusal" } };
+export const ErrorRecovery: Story = { args: { state: "error" } };
 export const Success: Story = { args: { state: "success" } };
